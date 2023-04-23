@@ -1,6 +1,6 @@
 /*   reset.css  */
 
-html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}*,::after,::before{box-sizing:inherit}blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{font-size:100%;font-weight:400;margin:0;padding:0;vertical-align:baseline;border:0;outline:0}ul{list-style:none}button,input,select,textarea{margin:0}audio,embed,iframe,img,object,video{height:auto;max-width:100%;border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}a{text-decoration:none;color:#1e87f0;cursor:pointer;border:none;background:transparent}a:active,a:focus,a:hover{outline-width:0;color:#000;color:#0f6ecd}
+html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Dosis,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}*,::after,::before{box-sizing:inherit}blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{font-size:100%;font-weight:400;margin:0;padding:0;vertical-align:baseline;border:0;outline:0}ul{list-style:none}button,input,select,textarea{margin:0}audio,embed,iframe,img,object,video{height:auto;max-width:100%;border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}a{text-decoration:none;color:#1e87f0;cursor:pointer;border:none;background:transparent}a:active,a:focus,a:hover{outline-width:0;color:#000;color:#0f6ecd}
 
 /* 	main  */
 
@@ -14,7 +14,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     font-weight: 400;
     line-height: 1.5;
 
-    color: #272727;
+    color: #343434;
     background: #f8f8f8
 }
 
@@ -77,8 +77,8 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.me-info
 {
-    font-family: 'Josefin Sans';
-    font-weight: 400;
+    font-family: 'Jost';
+    font-weight: 300;
     font-variant: small-caps;
 
     display: flex;
@@ -89,7 +89,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
     word-wrap: break-word;
 
-    color: #272727;
+    color: #343434;
 
     justify-content: center
 }
@@ -103,6 +103,8 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	.about-me
 {
 	font-size : 1.125rem;
+    font-weight: 400;
+    letter-spacing: .6px;
 	line-height : 1.5;
 
 	margin-left : 5px
@@ -127,8 +129,8 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
     stroke: currentColor;
     stroke-width: 0;
-    fill: #272727;
-    stroke: #272727
+    fill: #232323;
+    stroke: #232323
 }
 
 	svg.copyright-icon:hover
@@ -143,35 +145,39 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	.copyright
 {
 	font-size : .875rem;
+    font-weight: 400;
+    letter-spacing : .04rem;
 	line-height : 30px;
 
 	margin-left : 10px;
 
-	color : rgba(0, 0, 0, .7)
+	color : #343434
 }
 
 	.copyright a
 {
-    font-size: .875rem;
+    font-size: .875rem;    
+
+    padding: 0 12px 2px;
 
     text-decoration: none;
 
-    color: #272727
+    color: #02c6ba;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+
+    background: #fff;
 }
 
     .copyright a:hover,
     .copyright a:focus
 {
-    padding: 6px 12px;
-
     cursor: pointer;
     transition: all .3s ease 0s;
 
     color: #fff;
-    border: none;
-    border-radius: 45px;
-    outline: none;
-
+    
     background: #02c6ba;
     box-shadow: 0 8px 8px rgba(0, 0, 0, .1)
 }
@@ -196,8 +202,9 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.txt-label
 {
-    font: 1.4rem 'Josefin Sans';
+    font: 1.4rem 'Jost';
     font-weight: 300;
+    letter-spacing : .07rem;
     font-variant: small-caps;
     line-height: 60px;
 
@@ -236,10 +243,10 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	font-size : 1.125rem;		
 	font-weight : 300;
 
-  	overflow : hidden;
-  	text-overflow : ellipsis;
+    overflow : hidden;
+    text-overflow : ellipsis;
 
-	color : #272727
+	color: #343434
 }
 
 	.txt-card a
@@ -249,7 +256,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	text-decoration : none;
 
-	color : #272727
+	color: #343434
 }
 
 	.txt-card a:hover,
@@ -262,7 +269,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	transition : all .3s;
 	transform : scale(.1, 1);
 
-	color : #272727;
+	color: #232323;
 	border : none;
 	border-radius : 4px;
 	outline : none;
@@ -282,8 +289,8 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.shot img
 {  
-    width : 100%;
-    height : auto;
+   width : 100%;
+   height : auto;
   
  	object-fit: cover
 }
@@ -364,19 +371,19 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     letter-spacing : .07rem;
 }
 
- .track { font: 1.5rem 'Josefin Sans' } 
- .track-data { font-size: .875rem }
+    .track { font: 1.5rem 'Jost' } 
+    .track-data { font-size: .875rem }
 
 /* 	device	*/
 
 	@media (max-width: 1024px)
 
 {
-    html {  font-size: calc(14px + .390625vw) }
+   html {  font-size: calc(14px + .390625vw) }
 
 	.home-template { display: block }
 
-  	.content
+  .content
 {
 	display : flex;
 	flex-direction : column;
@@ -390,7 +397,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	order : 1
 }
 
-  	.about
+ 	.about
 {
 	bottom : 30px;
 	left : 0;
@@ -406,7 +413,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	justify-content : center
 }
 
-    .about img { opacity: .85 }
+  .about img { opacity: .85 }
 
 	.me-info
 {
@@ -439,7 +446,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 /* 	loader	*/
 
-.loader
+    .loader
 {
     display : flex;    
     align-items : center;
@@ -457,7 +464,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     background: rgba(209, 204, 192, .9)
 }
 
-.scanner 
+	.scanner 
 {
     font-size: 1.4rem;
 
@@ -468,7 +475,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     color: #84817a
 }
 
-.scanner::before
+	.scanner::before
 {
     position: absolute;
     top: 0;
