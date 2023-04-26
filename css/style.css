@@ -89,8 +89,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.title
 {
-    font-size: 2.5rem;
-    font-weight: 300  
+    font-size: 2.5rem
 }
 
     .about-me
@@ -307,7 +306,6 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
     transition : .3s;
     cursor : pointer;
-    transition : all .5s ease;
 
     fill : #f4f5f3;
     stroke : #f4f5f3
