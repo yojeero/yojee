@@ -1,21 +1,22 @@
 /*   reset.css  */
 
-html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Dosis,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}*,::after,::before{box-sizing:inherit}blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{font-size:100%;font-weight:400;margin:0;padding:0;vertical-align:baseline;border:0;outline:0}ul{list-style:none}button,input,select,textarea{margin:0}audio,embed,iframe,img,object,video{height:auto;max-width:100%;border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}a{text-decoration:none;color:#1e87f0;cursor:pointer;border:none;background:transparent}a:active,a:focus,a:hover{outline-width:0;color:#000;color:#0f6ecd}
+html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}*,::after,::before{box-sizing:inherit}blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{font-size:100%;font-weight:normal;margin:0;padding:0;vertical-align:baseline;border:0;outline:0}ul{list-style:none}button,input,select,textarea{margin:0}audio,embed,iframe,img,object,video{height:auto;max-width:100%;border:0;vertical-align:middle}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}a{text-decoration:none;color:#1e87f0;cursor:pointer;border:none;background:transparent}a:active,a:focus,a:hover{outline-width:0;color:#000;color:#0f6ecd}
 
 /* 	main  */
 
     body, html { height: 100% }
 
-    html { font-size: calc(10px + .390625vw) }
-
     body
 {
-    font: 1rem 'Segoe UI','Helvetica Neue';
-    font-weight: 400;
-    line-height: 1.5;
+    font-family: Jost, system-ui;
+    font-size: 1rem;
+    font-weight: 300; 
+    line-height: 2rem;
+
+    text-rendering: geometricPrecision;
 
     color: #343434;
-    background: #f8f8f8
+    background: #fff
 }
 
 	.home-template
@@ -56,7 +57,6 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     display: flex;
 
     text-align: left;
-    word-wrap: break-word;
 
     align-items: center;
     justify-content: center
@@ -75,19 +75,12 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     object-fit: cover
 }
 
-	.me-info
+    .me-info
 {
-    font-family: 'Jost';
-    font-weight: 300;
     font-variant: small-caps;
 
     display: flex;
     flex-direction: column;
-
-    margin-left: 0;
-    padding: 0;
-
-    word-wrap: break-word;
 
     color: #343434;
 
@@ -96,25 +89,19 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.title
 {
-	font-size : 3rem;
-	line-height : 1
+    font-size: 2.5rem;
+    font-weight: 300  
 }
 
-	.about-me
+    .about-me
 {
-	font-size : 1.125rem;
+    font-size: 1rem;
     font-weight: 400;
-    letter-spacing: .6px;
-	line-height : 1.5;
 
-	margin-left : 5px
+    letter-spacing: .04rem
 }
 
-	.social
-{
-    margin-top: 30px;
-    margin-left: 10px
-}
+	.social { margin-top: .5rem }
 
     svg.copyright-icon
 {
@@ -124,8 +111,6 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     height: 1.125rem;
 
     margin-right: 10px;
-
-    transition: all .5s ease;
 
     stroke: currentColor;
     stroke-width: 0;
@@ -138,46 +123,45 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     width: 1.25rem;
     height: 1.25rem;
 
+    transition : all .3s; 
+
     fill: #02c6ba;
     stroke: #02c6ba
 }
 
 	.copyright
 {
-	font-size : .875rem;
+    font-size : .875rem;
     font-weight: 400;
+    line-height : 1rem;
     letter-spacing : .04rem;
-	line-height : 30px;
-
-	margin-left : 10px;
 
 	color : #343434
 }
 
-	.copyright a
+    .copyright a
 {
-    font-size: .875rem;    
-
-    padding: 0 12px 2px;
-
+    font-size: .875rem;
     text-decoration: none;
 
-    color: #02c6ba;
-    border: none;
-    border-radius: 45px;
-    outline: none;
-
-    background: #fff;
+    color: #74b4d0
 }
 
     .copyright a:hover,
     .copyright a:focus
 {
+    padding: 2px 10px 6px;
+
     cursor: pointer;
-    transition: all .3s ease 0s;
+
+    transition : all .3s; 
+    transform : scale(.1, 1);
 
     color: #fff;
-    
+
+    border: none;
+    border-radius: 45px;
+    outline: none;
     background: #02c6ba;
     box-shadow: 0 8px 8px rgba(0, 0, 0, .1)
 }
@@ -200,80 +184,71 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     align-items: stretch
 }
 
-	.txt-label
+    .txt-card
 {
-    font: 1.4rem 'Jost';
-    font-weight: 300;
-    letter-spacing : .07rem;
-    font-variant: small-caps;
-    line-height: 60px;
+    font-size: 1.2rem;
 
     display: flex;
-    overflow: hidden;
-
-    height: 60px;
-    min-height: 60px;
-    padding: 0 40px;
-
-    text-overflow: ellipsis;
-
-    background: #f4f5f3;
-
-    order: 2
-}
-
-	.txt-card
-{
-	display : flex;
+    flex-direction: column;
 
     max-height: 50%;
+    padding: 2rem 3rem;
 
-	flex-grow : 1;
-	order : 1
+    justify-content: center;
+    flex-grow: 1;
+    order: 1
 }
 
-	.txt-card div	
+    .txt-card span
 {
-	margin : auto;
-	padding : 40px
-}	
-
-	.txt-card p
-{
-	font-size : 1.125rem;		
-	font-weight : 300;
-
-    overflow : hidden;
-    text-overflow : ellipsis;
-
-	color: #343434
+    margin-top: .5rem;
+    margin-bottom: .5rem
 }
 
-	.txt-card a
+    .txt-card a
 {
-	font-size : 1.125rem;
-	font-weight : 400;
-
-	text-decoration : none;
-
-	color: #343434
+    text-decoration: none;
+    color: #74b4d0
 }
 
-	.txt-card a:hover,
-	.txt-card a:focus
+    .txt-card a:hover,
+    .txt-card a:focus
 {
-	margin : 0 4px;
-	padding : 2px 4px 4px 6px;
+    font-size: 1rem;
 
-	cursor : pointer;
-	transition : all .3s;
-	transform : scale(.1, 1);
+    padding: 6px 14px;
 
-	color: #232323;
-	border : none;
-	border-radius : 4px;
-	outline : none;
-	background : #fff
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(.1, 1);
+
+    color: #fff;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+    background: #02c6ba;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1)
+}
+
+    .txt-label
+{
+    font-size: 1.4rem;
+    font-variant: small-caps;
+    line-height: 4rem;
+
+    display: flex;
+
+    height: 4rem;
+    min-height: 4rem;
+    padding-left: 3.2rem;
+
+    letter-spacing: .07rem;
+
+    color: #bfc0bf;
+    background: #f4f5f3;
+    text-shadow: 0 1px 1px #fff;
+
+    order: 2
 }
 
 	.shot
@@ -289,13 +264,13 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 
 	.shot img
 {  
-   width : 100%;
-   height : auto;
+    width : 100%;
+    height : auto;
   
  	object-fit: cover
 }
 
-/*  audio   */
+/*  radio player   */
 
     .player
 {
@@ -360,7 +335,7 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     align-items : stretch
 }
 
-    .audio-info p
+    .audio-info span
 {
     font-variant : small-caps;
 
@@ -371,17 +346,15 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
     letter-spacing : .07rem;
 }
 
-    .track { font: 1.5rem 'Jost' } 
-    .track-data { font-size: .875rem }
+    .track { font-size: 1.6rem } 
+    .track-data { font-size: 1.1rem }
 
 /* 	device	*/
 
 	@media (max-width: 1024px)
 
 {
-   html {  font-size: calc(14px + .390625vw) }
-
-	.home-template { display: block }
+  .home-template { display: block }
 
   .content
 {
@@ -413,31 +386,28 @@ html{box-sizing:border-box;line-height:1.15;-webkit-text-size-adjust:100%;font-f
 	justify-content : center
 }
 
-  .about img { opacity: .85 }
+    .about img { opacity: .85 }
 
-	.me-info
+    .me-info
 {
-	display : flex;
-	flex-direction : column;
+    display: flex;
+    flex-direction: column;
 
-	text-align : center;
+    text-align: center;
 
-	justify-content : center
+    justify-content: center
 }
 
-	.title { font-size: 2.5rem } 
-    .about-me { font-size: 1.25rem }
-
-	.sidebar
+    .sidebar
 {
-	display : flex;
-	flex-direction : column;
+    display: flex;
+    flex-direction: column;
 
-	width : 100%;
-	max-height : none;
+    width: 100%;
+    max-height: none;
 
-	justify-content : center;
-	order : 2
+    justify-content: center;
+    order: 2
 }
 
 	.player { padding: 2rem }
