@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+  
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -11,7 +12,7 @@
 
     <meta name="description" content="Frontend Engineer" />
 
-    <link rel="icon" type="image/svg+xml" href="img/fav.svg"> 	
+    <link rel="icon" type="image/svg+xml" href="img/fav.svg">
 
     <!-- Google Fonts --> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,70 +34,60 @@
 
 <body> 
 
-<div class="page">  
+<div class="page"> 
+
 		
-  <main class="main" id="home">
+  <main class="main">
+
 
     <div class="about">
 
-      <img src="img/avatar.webp" alt="">
+      <img src="img/me.webp" alt="">
 
         <div class="me-info">
 
             <div class="title">yojee</div>
 
-                <div class="about-me">frontend engineer</div>
+            <div class="about-me">frontend engineer</div>
 
-                <div class="social">         
-
-                  <a href="https://twitter.com/yojeero" target="_blank" rel="noreferrer">
-                    <svg class="copyright-icon"><use xlink:href="#twitter" /></svg>
-                  </a>
-
-                  <a href="https://github.com/yojeero" target="_blank" rel="noreferrer">
-                    <svg class="copyright-icon"><use xlink:href="#github" /></svg>
-                  </a>
-
-                  <a href="https://dribbble.com/yojeero" target="_blank" rel="noreferrer">
-                    <svg class="copyright-icon"><use xlink:href="#dribbble" /></svg>
-                  </a>
-
-              </div>
-
-            <div class="copyright">copyright © <a href="https://creativemarket.com/yojeero" target="_blank">yojee</a></div>
+            <div class="copyright">social <a href="https://pinterest.com/yojeero" target="_blank" rel="noreferrer">@yojeero</a></div>    
             
         </div>
 
       </div>
 
+
     </main>
+
 
     <aside class="sidebar">
 
-         <div class="txt-card">
 
-                <div>I'm a <a href="https://github.com/yojeero" target="_blank" rel="noreferrer">Frontend Engineer
-                </a> and <a href="https://twitter.com/yojeero" target="_blank" rel="noreferrer">Product Designer.</a> 
-                </div>
-                
-                <div>I'm specialized in the full interaction that users have with the web platform, from its design to its development, as well as usability, performance and accessibility.
-                </div>
+        <div class="txt-card">
 
-                <div>Find me on
-                  <a href="https://github.com/yojeero" target="_blank" rel="noreferrer">GitHub</a> / 
-                  <a href="https://creativemarket.com/yojeero" target="_blank" rel="noreferrer">Creative Market</a> / 
-                  <a href="https://dribbble.com/yojeero" target="_blank" rel="noreferrer">Dribbble</a>
-                </div>
+          <div>I'm a <a href="https://github.com/yojeero" target="_blank" rel="noreferrer">Frontend Engineer
+          </a> and <a href="https://twitter.com/yojeero" target="_blank" rel="noreferrer">Product Designer.</a> 
+          </div>
+          
+          <div>I'm specialized in the full interaction that users have with the web platform, from its design to its development, as well as usability, performance and accessibility.
+          </div>
 
-                <div>Touch by <a onClick="javascript:window.open('mailto:yojeero@gmail.com', 'Mail'); event.preventDefault()" href="mailto:yojeero@gmail.com?Subject=Hi%20Yojee">Email</a> / view <a href="http://maps.apple.com/maps?q=48.135758,11.571973" target="_blank"> Map </a> / in <a href="https://wa.me/79015030025?text=I'm%20interested%20in%20your%20web%20products" target="_blank"> Whatsapp</a>
-                </div>   
+          <div>Find me on
+            <a href="https://github.com/yojeero" target="_blank" rel="noreferrer">GitHub</a> / 
+            <a href="https://creativemarket.com/yojeero" target="_blank" rel="noreferrer">Creative Market</a> / 
+            <a href="https://dribbble.com/yojeero" target="_blank" rel="noreferrer">Dribbble</a>
+          </div>
+
+          <div>Touch by <a onClick="javascript:window.open('mailto:yojeero@gmail.com', 'Mail'); event.preventDefault()" href="mailto:yojeero@gmail.com?Subject=Hi%20Yojee">Email</a> / view <a href="http://maps.apple.com/maps?q=48.135758,11.571973" target="_blank"> Map </a> / in <a href="https://wa.me/79015030025?text=I'm%20interested%20in%20your%20web%20products" target="_blank"> Whatsapp</a>
+          </div>             
                 
         </div>
+
         <div class="txt-label">coding & design</div>
 
-        <div class="shot">          
-            <img src="img/shot.webp" alt="" >
-        </div>
+
+        <div class="shot"><img src="img/cover.webp" alt="" ></div>
+
 
          <div class="player">
     
@@ -108,66 +99,60 @@
           <div class="audio-info">
               <div class="track">maretimo lounge</div>
               <div class="track-data">maretimo dj</div>
-          </div>
+          </div>          
 
         </div>
 
-      </aside><!-- end sidebar -->
 
-    </div><!-- end content -->
+      </aside><!-- end sidebar -->
 
 
 </div><!-- end page --> 
 
+
      <!-- howler audio js --> 
+
     <script src="js/jquery.min.js"></script>    
     <script src="js/howler.min.js"></script>  
 
-      <!-- Loader -->       
+      <!-- loader -->    
+
     <script>setTimeout(function(){$('.loader').css('display', 'none'); }, 500);</script>  
 
-    <!-- howler player  -->  
-     <script>
+    <!-- howler player  -->
 
-    var sound = new Howl({
-    src: ["https://s35.derstream.net/lounge.mp3"],
-    html5: !0,
-    onplay: function() {
-        audioPlayed = !0;
-        $(".play").hide();
-        $(".stop").show()
-    },
-    onpause: function() {
-        $(".play").show();
-        $(".stop").hide()
-    }
-});
-$(".audio-icon").click(function() {
-    $(this).toggleClass("playing");
-    $(this).hasClass("playing") ? sound.play() : sound.pause()
-});
+    <script>
+
+        var sound = new Howl({
+        src: ["https://s35.derstream.net/lounge.mp3"],
+        html5: !0,
+        onplay: function() {
+            audioPlayed = !0;
+            $(".play").hide();
+            $(".stop").show()
+          },
+        onpause: function() {
+            $(".play").show();
+            $(".stop").hide()
+          }
+        });
+
+        $(".audio-icon").click(function() {
+            $(this).toggleClass("playing");
+            $(this).hasClass("playing") ? sound.play() : sound.pause()
+        });
 
     </script>   
 
-     <!-- SVG icons -->
-<script src="js/svg4everybody.min.js"></script>
-<script>svg4everybody();</script>
+     <!-- svg icons js -->
+
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
                   
-        <!-- svg icons -->       
-      <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"> 
+        <!-- svg icons sprite --> 
 
-        <symbol id="twitter" viewBox="0 0 20 20" >
-          <path d="M17.316 6.246c.008.162.01.326.01.488 0 4.99-3.796 10.742-10.74 10.742-2.132 0-4.115-.625-5.786-1.697.296.034.596.052.9.052 1.77 0 3.397-.604 4.688-1.615a3.777 3.777 0 0 1-3.526-2.62c.23.042.467.065.71.065.345 0 .68-.045.995-.13A3.781 3.781 0 0 1 1.54 7.827V7.78c.508.284 1.09.454 1.71.474a3.772 3.772 0 0 1-1.68-3.143c0-.69.185-1.34.51-1.897a10.726 10.726 0 0 0 7.783 3.944 3.774 3.774 0 0 1 3.677-4.634c1.085 0 2.066.457 2.755 1.19a7.591 7.591 0 0 0 2.397-.915c-.282.88-.88 1.62-1.66 2.087a7.55 7.55 0 0 0 2.168-.594 7.623 7.623 0 0 1-1.884 1.953z"/>
-        </symbol>
-
-        <symbol id="dribbble" viewBox="0 0 20 20">
-          <path stroke-width="1.4" d="M1.3 8.9s5 .1 8.6-1c1.4-.4 2.6-.9 4-1.9 1.4-1.1 2.5-2.5 2.5-2.5M3.9 16.6s1.7-2.8 3.5-4.2c1.8-1.3 4-2 5.7-2.2 2.9-.2 5.9.4 5.9.4M6.9 1.6s3.3 4.6 4.2 6.8c.4.9 1.3 3.1 1.9 5.2.6 2 .9 4.4.9 4.4" fill="none"/><circle stroke-width="1.4" cx="10" cy="10" r="9" fill="none"/>
-        </symbol>
-
-        <symbol id="github" viewBox="0 0 20 20">
-          <path d="M10 1c-4.97 0-9 4.03-9 9 0 3.98 2.58 7.35 6.16 8.54.45.08.61-.2.61-.43 0-.21-.01-.78-.01-1.53-2.5.54-3.03-1.21-3.03-1.21-.41-1.04-1-1.32-1-1.32-.82-.55.06-.55.06-.55.9.06 1.38.93 1.38.93.8 1.37 2.11.98 2.62.75.08-.58.31-.98.57-1.2-2-.23-4.1-1-4.1-4.45 0-.98.35-1.79.93-2.42-.09-.23-.4-1.14.09-2.38 0 0 .76-.24 2.47.92.72-.2 1.49-.3 2.25-.3s1.53.1 2.25.3c1.72-1.17 2.47-.92 2.47-.92.49 1.24.18 2.15.09 2.38.58.63.92 1.43.92 2.42 0 3.46-2.1 4.22-4.11 4.44.32.28.61.83.61 1.67 0 1.2-.01 2.17-.01 2.47 0 .24.16.52.62.43 3.58-1.19 6.16-4.56 6.16-8.54 0-4.97-4.03-9-9-9z"/>
-        </symbol>  
-
+      <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+      
         <symbol id="play" viewBox="0 0 40.007 40.007">
           <path d="M30.004 37.324c-9.566 5.522-21.798 2.245-27.32-7.32S.437 8.205 10.003 2.683C19.57-2.84 31.8.436 37.324 10.003s2.245 21.797-7.32 27.32zm3.856-25.32C29.442 4.35 19.656 1.728 12.004 6.146 4.35 10.565 1.73 20.35 6.147 28.003c4.418 7.653 14.204 10.275 21.856 5.856 7.653-4.42 10.275-14.204 5.857-21.857zm-6.66 9.195l-10.392 6c-.957.55-1.736.103-1.74-1l-.055-12.125c-.005-1.104.765-1.55 1.72-.993l10.472 6.11c.953.556.95 1.455-.005 2.007z" fill-rule="evenodd" clip-rule="evenodd" />
         </symbol>
