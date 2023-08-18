@@ -1,4 +1,4 @@
 
 <img src="preview/pic.jpg">
 
-## My personal site. ##
+## personal site. ##
