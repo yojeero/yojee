@@ -7,20 +7,23 @@
 {
     font-family: Jost, system-ui;
     font-size: 1rem;
-    font-weight: 300; 
-    line-height: 2rem;   
+    font-weight: 300;
+
+    line-height: 2rem;
 
     color: #343434;
-    background: #fff
+
+    background: #f4f5f3
 }
 
     .page
 {
     display: grid;
 
+    width: 100%;
     height: 100vh;
 
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 'main sidebar'
 }
 
@@ -31,7 +34,10 @@
     width: 100%;
     height: 100vh;
 
+    /* justify-content: space-around;  */
+
     border-right: 8px solid #f4f5f3;
+
     background: url(../img/bg.webp) no-repeat 50% 50% fixed;
     background-size: cover;
 
@@ -42,11 +48,12 @@
 {
     display: grid;
 
+    margin: 0 0 5rem 3rem;
+
     text-align: left;
 
-    margin: 4rem;    
-
     grid-template-columns: 300px max-content;
+
     align-content: end;
     place-items: center
 }
@@ -54,9 +61,7 @@
     .about img
 {
     width: 200px;
-    height: 200px; 
-
-    margin: 2rem;
+    height: 200px;
 
     border-radius: 50%;
     background: no-repeat center;
@@ -73,7 +78,7 @@
     color: #343434
 }
 
-	.title { font-size: 2.5rem }
+    .title { font-size: 2.5rem }
 
     .about-me
 {
@@ -83,47 +88,22 @@
     letter-spacing: .04rem
 }
 
-	.social { margin-top: .5rem }
-
-    svg.copyright-icon
+    .copyright
 {
-    display: inline-block;
-
-    width: 1.125rem;
-    height: 1.125rem;
-
-    margin-right: 10px;
-
-    stroke: currentColor;
-    stroke-width: 0;
-    fill: #232323;
-    stroke: #232323
-}
-
-	svg.copyright-icon:hover
-{
-    width: 1.25rem;
-    height: 1.25rem;
-
-    transition : all .3s; 
-
-    fill: #02c6ba;
-    stroke: #02c6ba
-}
-
-	.copyright
-{
-    font-size : .875rem;
+    font-size: .875rem;
     font-weight: 400;
-    line-height : 1rem;
-    letter-spacing : .04rem;
 
-	color : #343434
+    line-height: 2rem;
+
+    letter-spacing: .04rem;
+
+    color: #343434
 }
 
     .copyright a
 {
     font-size: .875rem;
+
     text-decoration: none;
 
     color: #74b4d0
@@ -136,11 +116,10 @@
 
     cursor: pointer;
 
-    transition : all .3s; 
-    transform : scale(.1, 1);
+    transition: all .3s;
+    transform: scale(.1, 1);
 
     color: #fff;
-
     border: none;
     border-radius: 45px;
     outline: none;
@@ -155,16 +134,11 @@
     display: grid;
 
     width: 100%;
-    height: 100%;
-    max-height: 100vh;
+    height: 100vh;
 
     background: #fff;
 
-    grid-area: sidebar;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4rem 280px 180px;
-/*     grid-template-rows: 1fr 4rem 300px 160px */
-
+    grid-area: sidebar
 }
 
     .txt-card
@@ -173,20 +147,25 @@
 
     display: grid;
 
-    margin: auto;
-    padding: 2rem 3rem;
+    width: 100%;
+    height: 43vh;
 
-    grid-auto-rows: min-content;
+    padding: 2rem;
+
+    align-content: center;
+
     order: 1
 }
 
     .txt-card div
 {
-    margin-top: .5rem;
-    margin-bottom: .5rem
+    overflow: hidden;
+
+    margin-top: .75rem;  
+    margin-bottom: .75rem  
 }
 
-    .txt-card a { color: #74b4d0 }
+    .txt-card a { color: #74b4d0}
 
     .txt-card a:hover,
     .txt-card a:focus
@@ -196,6 +175,7 @@
     padding: 6px 14px;
 
     cursor: pointer;
+
     transition: all .3s;
     transform: scale(.1, 1);
 
@@ -207,16 +187,17 @@
 
     .txt-label
 {
-    display: grid;
-
     font-size: 1.4rem;
     font-variant: small-caps;
+
     line-height: 4rem;
 
     display: grid;
 
-    height: 4rem;
-    padding-left: 3.2rem;
+    width: 100%;
+    height: 7vh;
+
+    padding-left: 2.4rem;
 
     letter-spacing: .07rem;
 
@@ -227,19 +208,24 @@
     order: 2
 }
 
-	.shot
+    .shot
 {
-	display: grid;
+    display: grid;
 
-	order : 3
+    width: 100%;
+    height: 30vh;
+
+    user-select: none;
+
+    order: 3
 }
 
-	.shot img
-{  
-    width : 100%;
-    height: 280px;
-  
- 	object-fit: cover
+    .shot img
+{
+    width: 100%;
+    height: 30vh;
+
+    object-fit: cover
 }
 
 /*  radio player   */
@@ -247,38 +233,41 @@
     .player
 {
     display: grid;
-    grid-template-columns: auto auto;
 
-    text-align: right;  
-    place-items: center;
+    width: 100%;
+    height: 20vh;
+
+    text-align: right;
 
     background: #c7cbb6;
 
+    place-items: center;
+    grid-template-columns: auto auto;
     order: 4
 }
 
     .audio-icon
 {
-    display : grid;
-    align-items : center
+    display: grid;
+
+    align-items: center
 }
 
     svg.audio
 {
-    display : grid;
+    display: grid;
 
-    width : 3.75rem;
-    height : 3.75rem;   
-    
-    align-items : center;
-    stroke : currentColor;
-    stroke-width : 0;
+    width: 3.75rem;
+    height: 3.75rem;
 
-    transition : .3s;
-    cursor : pointer;
+    cursor: pointer;
 
-    fill : #f4f5f3;
-    stroke : #f4f5f3
+    transition: .3s;
+
+    align-items: center;
+    stroke: currentColor;
+    stroke-width: 0;
+    fill: #f4f5f3
 }
 
     svg.audio:hover
@@ -286,31 +275,31 @@
     width: 4rem;
     height: 4rem;
 
-    fill: #e6ecec;
-    stroke: #e6ecec
+    fill: #e6ecec
 }
 
-    svg.hide-play {display: none }
+    svg.hide-play { display: none }
 
     .audio-info
 {
-    display : grid;
+    display: grid;
 
-    width : 60%;
-    color :  #fff;
+    width: 60%;
 
-    align-items : stretch
+    color: #fff;
+
+    align-items: stretch
 }
 
     .audio-info div
 {
-    font-variant : small-caps;
+    font-variant: small-caps;
 
-    margin : 0;
-    padding : 0;
+    margin: 0;
+    padding: 0;
 
-    text-align : right;
-    letter-spacing : .07rem;
+    text-align: right;
+    letter-spacing: .07rem
 }
 
     .track { font-size: 1.6rem } 
@@ -318,27 +307,27 @@
 
 /* 	device	*/
 
-	@media (max-width: 1024px)
+	@media ( max-width: 1024px )
 
 {
+
   .page
 {
-    grid-template-columns: 1fr; 
-    grid-template-areas:   
+    grid-template-columns: 1fr;
+    grid-template-areas: 
     'main'
-    'sidebar';
+    'sidebar'
 }
 
-  .main
+    .main
 {
-	display : grid;
+    display: grid;
 
-	border-right : none;
+    width: 100%;
 
-    grid-template-columns: 1fr;
+    border-right: none;
 
-	width : 100%;
-	order : 1
+    order: 1
 }
 
     .about
@@ -347,13 +336,12 @@
 
     width: 100%;
     height: 100vh;
+
     margin: 0;
 
     grid-template-columns: auto;
     align-content: center
 }
-
-    .about img { opacity: .85 }
 
     .me-info
 {
@@ -370,6 +358,8 @@
 
     order: 2
 }
+
+    .txt-card { padding: 2rem }
 
 	.player { padding: 2rem }
     
