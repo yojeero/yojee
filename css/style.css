@@ -16,6 +16,20 @@
     background: #f4f5f3
 }
 
+    .rebuild
+{
+    font-variant: small-caps;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 4rem;
+    font-weight: 400;
+
+    color: #343434
+}
+
+
     .page
 {
     display: grid;
