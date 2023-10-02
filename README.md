@@ -1,3 +1,3 @@
 
-<img src="preview/pic.jpg">
+<img src="preview/yo.jpg">
 
