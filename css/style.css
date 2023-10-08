@@ -15,7 +15,6 @@ a:active, a:focus, a:hover {outline-width: 0}
 :root 
 {
   --color-bg: #f4f5f3; 
-  --color-bg-wild : #dbeef2 ;
 
   --color-loader : #84817a ;
   --color-loader-bg : rgba(209, 204, 192, .9) ;
@@ -24,13 +23,13 @@ a:active, a:focus, a:hover {outline-width: 0}
   --color-white: #fff;
 
   --color-link: #74b4d0;
-  --color-hover: #02c6ba;
+  --color-hover: #45d9db;
 
-  --color-label: #bfc0bf;
+  --color-label: #ebddbe;
 
   --color-player-bg: #124559;
   --color-player: #ae8f37;  
-  --color-player-hover: #c7a64d;  
+  --color-player-hover: #c7a64d; 
   --color-player-time: #608e9f;  
   --color-player-info: #d1b76f;  
 
@@ -43,139 +42,137 @@ a:active, a:focus, a:hover {outline-width: 0}
 
 body
 {
-    font-family: Jost, var(--font-family);
-    font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.6;
+    font-family : Jost, var(--font-family);
+    font-size : 1.6rem;
+    font-weight : 300;
+    line-height : 1.6;
 
     margin : 0;
     padding : 0;
 
-    color: var(--color-text);
-    background: var(--color-bg)
+    color : var(--color-text);
+    background : var(--color-bg)
 }
 
 .page
 {
-    display: grid;
+    display : grid;
 
-    margin: auto;
-    place-items: center;
-
-    width : 100%;   
-    height : 100%;
-    min-height : 100vh; 
+    width : 100%;
     max-width : 1920px;
+    height : 100%;
+    min-height : 100vh;
     max-height : 1080px;
 
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: 'main sidebar'
+    margin : auto;
+
+    grid-template-areas : 'main sidebar';
+    grid-template-columns : 2fr 1fr;
+    place-items : center
 }
 
 .main
 {
-    display: grid;
+    display : grid;
 
-    width: 100%;
-    height: 100vh;
+    width : 100%;
+    height : 100vh;
     max-height : 1080px;
 
-    background: url(../img/paper.jpg) no-repeat center fixed;
-/*     background: url(../img/bg.webp) no-repeat center fixed; */
-    background-size: cover;
-
-    grid-area: main
+    background : url(../img/bg.svg) no-repeat center;
+    background-size : cover;
+  
+    grid-area : main
 }
 
 .about
 {
-    display: grid;
-    z-index: 1;
+    display : grid;
 
-    margin: 4rem;
+    margin : 0 0 8em 8em;
 
-    text-align: left;
+    grid-template-rows : 220px max-content;
 
-    grid-template-columns: 300px max-content;
-    align-content: end;
-    place-items: center
+    align-self : end;    
+    justify-items : start
 }
 
 .about img
 {
-    width: 200px;
-    height: 200px;
+    width : 200px;
+    height : 200px;
 
-    margin: 2rem;
+    border-radius : 50%;
 
-    border-radius: 50%;
-    background: no-repeat center;
-
-    object-fit: cover
+    object-fit : cover
 }
 
-.me-info
+.about div
 {
-    font-variant: small-caps;
+    margin-left : 2em;
+    padding : 0 2rem 0 2rem;
 
-    display: grid;
-
-    color: var(--color-white)
-/*     color: var(--color-text) */
+    border-radius : 3px
 }
 
-.title 
-{ 
-    font-size: 2.5rem ;
-    line-height : 1
-}
-
-.about-me
+.about a
 {
-    font-size: 1.4rem;    
-    font-weight: 400;
+    font-size : 2rem;
+    font-weight : 400;
+    font-variant : small-caps;
 
-    letter-spacing: .04rem
+    letter-spacing : .2rem;
+
+    color : var(--color-white)
 }
 
-.copyright
+.name
 {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 4;
-
-    letter-spacing: .04rem;
-
-    color: var(--color-white)
-/*     color: var(--color-text) */
+    background-color : var(--color-hover)
 }
 
-.copyright a
+.name:hover , .name:focus
 {
-    font-size: 1rem;
-    text-decoration: none;
+    transition : all .3s;
 
-    color:  var(--color-link)
+    color : var(--color-white);
+    border : none;
+    outline : none;
+    background : var(--color-link)
 }
 
-.copyright a:hover,
-.copyright a:focus
+.skill
 {
-    padding: 2px 8px;
+    margin : 4px 0 4px;
 
-    cursor: pointer;
-    transition: all .3s;
-    transform: scale(.1, 1);
-
-    color:  var(--color-white);
-    border: none;
-    border-radius: 45px;
-    outline: none;
-    background:  var(--color-hover);
-    box-shadow: 0 8px 8px  var(--color-shadow)
+    background-color : var(--color-link)
 }
 
-/*  side  */
+.social
+{
+    background-color : var(--color-white)
+}
+
+.social a
+{
+    color : var(--color-link)
+}
+
+.social a:hover , .social a:focus
+{
+    color : var(--color-white)
+}
+
+.skill:hover , .skill:focus ,
+.social:hover , .social:focus
+{
+    transition : all .3s;
+    border : none;
+    outline : none;
+    background : var(--color-hover)
+}
+
+/*  aside  */
 
 .sidebar
 {
@@ -214,21 +211,21 @@ body
     color : var(--color-link)
 }
 
-.txt-card a:hover,
+.txt-card a:hover ,
 .txt-card a:focus
 {
-    font-size: 1.5rem;
+    font-size : 1.5rem;
 
-    padding: 4px 8px;
+    padding : 4px 8px;
 
-    cursor: pointer;
-    transition: all .3s;
-    transform: scale(.1, 1);
+    cursor : pointer;
+    transition : all .3s;
+    transform : scale(.1, 1);
 
-    color: var(--color-white);
-    border-radius: 45px;
-    background: var(--color-hover);
-    box-shadow: 0 2px 8px var(--color-shadow)
+    color : var(--color-white);
+    border-radius : 45px;
+    background : var(--color-hover);
+    box-shadow : 0 2px 8px var(--color-shadow)
 }
 
 .txt-label
@@ -245,8 +242,7 @@ body
     letter-spacing: .07rem;
 
     color: var(--color-label);
-    background: var(--color-bg);
-    text-shadow: 0 1px 1px var(--color-white);
+    background: var(--color-player-hover);
 
     order: 2
 }
@@ -401,32 +397,20 @@ body
     grid-template-columns: 1fr;
     order: 1
 }
- 
+
 .about
 {
-    display: grid;
-    opacity: 1;
+    margin : auto;
 
-    width: 100%;
-    margin: 0;
-
-    grid-template-columns: auto;
-    align-content: center
+    justify-items: center;
+    align-self: center;    
+   
+    place-items : center
 }
 
-.about img
+.about div
 {
-    width : 140px;
-    height : 140px;
-
-    margin : 3rem
-}
-
-.me-info
-{
-    display: grid;
-
-    text-align: center
+    margin-left : 0
 }
 
 .sidebar
@@ -449,40 +433,12 @@ body
 
 {
 
-body
-
-{
-    background-color : var(--color-bg-wild);    
-}
-
-body::before
-{
-    position : absolute;
-    z-index : -1;
-
-    width : 100%;
-    height : 100%;
-
-    content : '';
-
-    background-image : url(../img/yellow.png), url(../img/teal.svg);
-    background-repeat : no-repeat, no-repeat;
-    background-position : bottom -40px right 14%, center;    
-    background-size : 470px 353px, cover
-}
-
-.page
-{
-    width : 1920px;
-    height : 1080px 
-}
-
-main
+.main
 {
     box-shadow : -10px 0 8px -8px var(--color-shadow)
 }
 
-aside
+.sidebar
 {
     box-shadow : 10px 0 8px -8px var(--color-shadow)
 }
