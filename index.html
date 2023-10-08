@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title> Yojee </title>
+
+    <meta name="description" content="Frontend Engineer" />
+
+    <link rel="icon" type="image/svg+xml" href="img/fav.svg">
+
+    <!-- Google Fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">   
+
+    <!-- style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="p:domain_verify" content="00cc6676e048be4ff7df26f21c56135b"/>
+
+</head>
+
+<!-- loader -->
+<div class="loader"><div class="scanner">Loading...</div></div>
+
+<!-- main -->
+
+<body> 
+
+<div class="page">  
+		
+  <div class="main"> 
+
+    <div class="about">  
+
+        <a href="https://github.com/yojeero" target="_blank">
+          <img src="img/me.webp" alt="">
+        </a> 
+
+        <div class="name">
+          <a href="https://github.com/yojeero" target="_blank">i`m yojee</a>
+        </div>
+
+        <div class="skill">
+          <a href="https://github.com/yojeero" target="_blank">frontend engineer</a>
+        </div>        
+
+        <div class="social">
+          <a href="https://twitter.com/yojeero" target="_blank">@yojeero</a> 
+        </div>
+
+      </div>  
+
+    </div>
+
+    <div class="sidebar">
+
+        <div class="txt-card">
+
+                <div>I'm a <a href="https://github.com/yojeero" target="_blank">Frontend Engineer
+                </a> and <a href="https://twitter.com/yojeero" target="_blank">Product Designer.</a> 
+                </div>
+                
+                <div>I'm specialized in the full interaction that users have with the web platform, from its design to its development, as well as usability, performance and accessibility.
+                </div>
+
+                <div>Find me on
+                  <a href="https://github.com/yojeero" target="_blank">GitHub</a> / 
+                  <a href="https://creativemarket.com/yojeero" target="_blank">Creative Market</a> / 
+                  <a href="https://dribbble.com/yojeero" target="_blank">Dribbble</a>
+                </div>
+
+                <div>Touch by <a onClick="javascript:window.open('mailto:yojeero@gmail.com', 'Mail'); event.preventDefault()" href="mailto:yojeero@gmail.com?Subject=Hi%20Yojee">Email</a> / view <a href="http://maps.apple.com/maps?q=48.135758,11.571973" target="_blank"> Map </a> / in <a href="https://wa.me/79015030025?text=I'm%20interested%20in%20your%20web%20products" target="_blank"> Whatsapp</a>
+                </div>   
+                
+        </div>
+
+        <div class="txt-label"> coding &#35; design &#8482; </div>
+
+        <div class="shot">          
+            <img src="img/shot.webp" alt="" >
+        </div>
+
+         <div class="audio-player">
+
+           <audio id="audio">
+            <source src="https://s35.derstream.net/lounge.mp3" type="audio/mp3">
+           </audio>
+          
+            <div class="player-controls">        
+
+              <div id="playAudio"></div>
+              <div id="currentTime">&#9022</div>
+            </div>
+
+          <div class="audio-info">
+              <div class="track">maretimo lounge</div>
+              <div class="track-data">radio</div>
+          </div>
+
+        </div>
+
+      </div><!-- end sidebar -->
+
+    </div><!-- end content -->
+
+
+</div><!-- end page --> 
+
+      <!-- hide loader -->       
+   <script>setTimeout(function(){document.querySelector('.loader').style.display='none'; }, 500 );</script> 
+
+   <!-- vanilla audio player -->
+   <script>
+     function $(id){return document.getElementById(id);};const media=$('audio');let ui={play:'playAudio',audio:'audio',currentTime:'currentTime'};function togglePlay(){if(media.paused===false){media.pause();$(ui.play).classList.remove('pause');}else{media.play();$(ui.play).classList.add('pause');}}
+     function calculateCurrentValue(currentTime){const currentMinute=parseInt(currentTime/60)%60;const currentSecondsLong=currentTime%60;const currentSeconds=currentSecondsLong.toFixed();const currentTimeFormatted=`${currentMinute<10?`0${currentMinute}`:currentMinute}:${currentSeconds<10?`0${currentSeconds}`:currentSeconds}`;return currentTimeFormatted;}
+     function showTime(){const currentTime=calculateCurrentValue(media.currentTime);$(ui.currentTime).innerHTML=currentTime;media.onended=()=>{$(ui.play).classList.remove('pause');$(ui.currentTime).innerHTML='00:00';};calculatePercentPlayed();}
+     $(ui.play).addEventListener('click',togglePlay)
+     $(ui.audio).addEventListener('timeupdate',showTime);
+   </script>       
+
+     <!-- SVG icons -->
+<script src="js/svg4everybody.min.js"></script>
+<script>svg4everybody({polyfill: true});</script>               
+     
+</body>
+</html>
