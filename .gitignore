@@ -1,5 +1,5 @@
 # Игнорировать файл preview
-/preview/pic.jpg
+/preview/view.jpg
 
 #Исключим сам файл .gitignore:
 .gitignore
