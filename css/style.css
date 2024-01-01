@@ -81,7 +81,7 @@ body
     min-height : 100vh;
 
     background : url(../img/bg.svg) no-repeat center;
-    background-size : cover;
+    /* background-size : cover; */
   
     grid-area : main
 }
