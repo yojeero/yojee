@@ -14,7 +14,7 @@ a:active, a:focus, a:hover {outline-width: 0}
 
 :root 
 {
-  --color-bg: #f4f5f3; 
+  --color-bg: #fff; 
 
   --color-loader : #84817a ;
   --color-loader-bg : rgba(209, 204, 192, .9) ;
