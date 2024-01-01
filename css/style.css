@@ -80,7 +80,7 @@ body
     max-height : 1080px;
     
     background : url(../img/bg.svg) no-repeat center;
-    background-size: cover;    
+    background-size: contain;    
   
     grid-area : main
 }
