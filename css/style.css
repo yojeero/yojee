@@ -76,9 +76,7 @@ body
     display : grid;
 
     width : 100%;
-    /*height : 100vh;*/    
-    height: auto;
-    min-height: 100vh;
+    height : 100vh;
     max-height : 1080px;
     
     background : url(../img/bg.svg) no-repeat center;
