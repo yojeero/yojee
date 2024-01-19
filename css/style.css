@@ -186,7 +186,7 @@ body
 
     grid-area: sidebar;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4.625rem auto 180px
+    grid-template-rows: 1fr 4.625rem auto auto
 }
 
 .txt-card
