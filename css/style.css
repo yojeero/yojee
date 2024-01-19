@@ -270,7 +270,7 @@ body
 {
     display: grid;
 
-    min-height : 20%;
+    min-height : 180px;
     max-height : 200px;
 
     text-align: right;
