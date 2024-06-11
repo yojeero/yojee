@@ -23,7 +23,7 @@ body
 	padding : 0;
 
 	color : #343434;
-    background : url(../img/scene.svg) no-repeat center, #f4f5f3;
+    background : url(../img/wall.svg) no-repeat center, #f4f5f3;
     background-size: cover;
 }
 
@@ -36,6 +36,7 @@ body
 	height : 100%;
 	min-height : 100vh;
 	max-height : 1080px;
+
 	margin : auto;
 
 	grid-template-areas : 'main sidebar';
@@ -96,7 +97,6 @@ body
 
 	color : #fff;
 }
-
 
 .name
 {
@@ -226,8 +226,7 @@ body
 .shot
 {
 	display : grid;
-	order : 3
-;
+	order : 3;
 
 	user-select : none;
 }
@@ -245,8 +244,7 @@ body
 .audio-player
 {
 	display : grid;
-	order : 4
-;
+	order : 4;
 
 	min-height : 20%;
 	max-height : 200px;
@@ -320,8 +318,7 @@ body
 	line-height : 1;
 
 	display : grid;
-	align-items : stretch
-;
+	align-items : stretch;
 
 	color : #d1b76f;
 }
@@ -347,9 +344,70 @@ body
 	font-size : 2rem;
 }
 
-/*  device  */
 
-@media screen and (max-width: 1024px )
+/*  loader  */
+
+.loader
+{
+	position : absolute;
+	z-index : 9999;
+	top : 0;
+	right : 0;
+	bottom : 0;
+	left : 0;
+
+	display : flex;
+	align-items : center;
+	justify-content : center;
+
+	width : 100%;
+	height : 100vh;
+
+	margin : auto;
+
+	background : #f4f5f3;
+}
+
+.cube-loader
+{
+	position : relative;
+
+	display : flex;
+
+	width : 3rem;
+	height : 3rem;
+}
+
+.cube-loader:after ,
+.cube-loader:before
+{
+	position : absolute;
+	top : 0;
+	left : 0;
+
+	width : 3rem;
+	height : 3rem;
+
+	content : '';
+	animation : rotation 2s ease-in-out infinite alternate;
+
+	border : 2px solid #ffc037;
+}
+
+.cube-loader:after
+{
+	animation-direction : alternate-reverse;
+	border-color : #fff;
+}
+
+@keyframes rotation {0% {transform: rotate(0deg) } 100% {transform: rotate(360deg) } }
+
+
+/* ---- device ------ */
+
+/*  Responsive mobile screen max 1024px  */
+
+@media screen and (max-width: 64rem )
 
 {
 
@@ -403,13 +461,15 @@ body
 
 /*  desktop wild and tv */
 
-@media screen and (min-width: 1921px)
+/*  Responsive mobile screen max 1921px   */
+
+@media screen and (min-width: 120.0625rem)
 
 {
 
 .main
 {
-	box-shadow : -10px 0 8px -8px rgba(0, 0, 0, .2);
+	box-shadow : -10px 0 8px -8px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar
@@ -418,62 +478,3 @@ body
 }
 
 }
-
-/*  loader  */
-
-.loader
-{
-	position : absolute;
-	z-index : 9999;
-	top : 0;
-	right : 0;
-	bottom : 0;
-	left : 0;
-
-	display : flex;
-	align-items : center;
-	justify-content : center;
-
-	width : 100%;
-	height : 100vh;
-
-	margin : auto;
-
-	background : #f1f1f1;
-}
-
-.cube-loader
-{
-	position : relative;
-
-	display : flex;
-
-	width : 48px;
-	height : 48px;
-}
-
-.cube-loader:after ,
-.cube-loader:before
-{
-	position : absolute;
-	top : 0;
-	left : 0;
-
-	width : 48px;
-	height : 48px;
-
-	content : '';
-	animation : rotation 2s ease-in-out infinite alternate;
-
-	border : 2px solid #02c6ba;
-}
-
-.cube-loader:after
-{
-	animation-direction : alternate-reverse;
-
-	border-color : #c7cbb6;
-}
-
-
-@keyframes rotation {0% {transform: rotate(0deg) } 100% {transform: rotate(360deg) } }
