@@ -1,17 +1,25 @@
 {
   "name": "yojee",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "packageManager": "bun@1.4.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "check": "biome check --write",
+    "ci": "biome ci"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "biome": "^0.3.3",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.0",
-    "tailwindcss": "^4.3.0",
+    "@biomejs/biome": "2.5.14",
     "vite": "^8.0.0"
   }
 }

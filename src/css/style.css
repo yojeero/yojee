@@ -1,553 +1,238 @@
 /* prettier-ignore-file */
 @import "tailwindcss";
 
+@font-face {
+  font-family: "IBMPlexSans-Regular";
+  src: url("/fonts/IBMPlexSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Advent Pro";
+  src: url("/fonts/AdventPro-Variable.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Questrial";
+  src: url("/fonts/Questrial-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
-  
   body {
-    @apply 
-    min-h-screen 
-    
-    bg-stone-100 
+    @apply min-h-screen bg-stone-100 subpixel-antialiased;
 
-    subpixel-antialiased
-  ;
+    font-family: "IBMPlexSans-Regular", system-ui, sans-serif;
+  }
 
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  a {
+    font-family: "Questrial", system-ui, sans-serif;
+    font-weight: 400;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-a {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-weight: 600;
-}
-
-button {
-  @apply 
-    focus-visible:outline-none focus-visible:ring-2
-  ;
-}
-
+  button {
+    @apply focus-visible:outline-none focus-visible:ring-2;
+  }
 }
 
 @layer components {
-
-body.loading {
-  @apply 
-    overflow-hidden
-  ;
-}
-
-.loader {
-  @apply 
-    flex items-center justify-center 
-
-    bg-gray-100 
-
-    z-50
-
-    transition-opacity duration-300 ease-out
-  ;
-}
-
-.loader.opacity-0 {
-  @apply 
-    pointer-events-none
-  ;
-}
-
-.line {
-  @apply 
-    fixed top-0 left-0 
-
-    w-full h-0.5 
-
-    bg-white 
-
-    rounded-xs 
-
-    blur-[0.3px]
-
-    overflow-hidden   
-
-    after:fixed after:w-0 after:h-full after:top-0 after:left-0 after:bg-sky-200
-  ;
-}
-
-  .line:after {
-    content: [];
-    animation: prog 2.8s ease-in-out infinite;
+  main {
+    @apply w-full max-w-3xl mx-auto grid justify-center justify-self-center text-stone-700 leading-relaxed;
   }
 
-  @keyframes prog {
-    0% { left: -40%; width: 40%; } 
-    50% { left: 30%; width: 60%; } 
-    100% { left: 100%; width: 40%; }
+  .header {
+    @apply w-full min-h-dvh grid place-content-evenly;
   }
 
-main {
-  @apply 
-    w-full max-w-3xl mx-auto
-
-    grid justify-center justify-self-center
-
-    text-stone-700 leading-relaxed
-  ;
-}
-
-.header {
-  @apply 
-    w-full min-h-dvh 
-
-    grid place-content-evenly
-  ;
-}
-
-.header-ava {
-  @apply 
-    grid place-self-center
-
-    max-sm:p-4
-  ;
-}
-
-.header-ava img {
-  @apply 
-    h-[30vh]
-    md:h-[400px]
-
-    aspect-square
-
-    rounded-full 
-    
-    object-center 
-  ;
-}
-
-.header h1 {
-  @apply 
-    w-full
-
-    grid place-self-center
-
-    leading-normal text-center text-5xl 
-    
-    lg:text-7xl
-    
-    mb-8 max-sm:px-4
-  ;
-}
-
-.header h1 span {
-  @apply 
-    text-stone-500 leading-none
-  ;
-}
-
-.about {
-  @apply 
-    w-full
-
-    grid m-auto 
-
-    rounded-3xl 
-    border border-white 
-
-    bg-stone-100
-
-    shadow-md
-  ;
-}
-
-.about-info {
-  @apply 
-    grid place-content-evenly 
-
-    rounded-t-3xl 
-
-    bg-white
-    
-    px-10 py-10 gap-y-8 
-  ;
-}
-
-.about-info h3 {
-  @apply 
-    text-stone-500 uppercase  leading-10
-  ;
-}
-
-.about-info span {
-  @apply 
-    mr-2
-  ;
-}
-
-.about-info a {
-  @apply 
-  text-stone-500  
-
-  transition-transform transition-opacity duration-300
-
-  cursor-pointer 
-  
-  hover:text-green-600
-  ;
-}
-
-.shot {
-  @apply 
-    w-full
-
-    grid place-content-center 
-
-    bg-stone-50
-
-    overflow-hidden
-  ;
-}
-
-.shot img {
-  @apply 
-    w-screen object-cover
-  ;
-}
-
-.player {
-  @apply 
-    w-full h-42
-
-    grid grid-cols-2 
-    
-    lg:grid-cols-[2fr_2fr_3fr] 
-
-    border-t border-white
-  ;
-}
-
-.controls {
-  @apply 
-    grid place-content-center place-items-center
-
-    rounded-s-3xl 
-
-    bg-transparent 
-
-    border-solid border-r border-stone-300   
-    outline-none 
-
-    hover:shadow-2xl hover:bg-white hover:border hover:border-stone-600   
-  ;
-}
-
-.controls button {
-  @apply 
-    transition-transform ease-in-out duration-300    
-
-    cursor-pointer
-  ;
-}
-
-.controls svg {
-  @apply 
-  w-22 h-22
-
-  text-rose-600 
-  
-  hover:text-stone-400
-  ;
-}
-
-.stopIcon {
-  @apply 
-    hidden
-  ;
-}
-
-.wave-icon {
-  @apply 
-    grid place-content-center place-items-center
-
-    pointer-events-none
-  ;
-}
-
-.wave-icon svg {
-  @apply 
-    text-stone-500
-  ;
-}
-
-.channel {
-  @apply 
-    place-content-center
-
-    tracking-wider
-    
-    lg:grid max-lg:hidden
-  ;
-}
-
-.station {
-  @apply 
-    text-lg text-stone-600 uppercase
-
-    cursor-pointer
-
-    hover:text-rose-600
-  ;
-}
-
-.genre {
-  @apply 
-    text-sm text-stone-500 capitalize
-  ;
-}
-
-.folio {
-  @apply 
-    w-full   
-    grid place-items-center
-
-    max-sm:p-4
-  ;
-}
-
-.brand {
-  @apply 
-    grid place-items-center 
-    
-    gap-y-14 my-20 p-8
-  ;
-}
-
-.brand a {
-  @apply 
-    inline-flex
-
-    min-h-8 min-w-8 
-    
-    cursor-pointer 
-    
-    items-center justify-center 
-; 
-}
-
-.brand img {
-  @apply 
-    h-10 object-contain
-
-    transition-transform ease-in-out duration-300 
-    
-    hover:py-1 hover:px-2 
-  ;
-}
-
-.works {
-  @apply 
-    w-full max-w-md 
-
-    grid m-auto
-
-    bg-white 
-
-    rounded-xl
-
-    shadow-md
-    
-    p-4 sm:p-8
-  ;
-}
-
-.card-top {
-  @apply 
-    flex items-center justify-between
-    
-    mb-4
-  ;
-}
-
- img.store {
-  @apply 
-    h-6 object-cover
-  ;
-}
-
-.card-top h5 {
-  @apply 
-    text-xl font-bold leading-none text-gray-700
-  ;
-}
-
-.card-top a {
-  @apply 
-    text-sm font-medium text-slate-400 
-    
-    hover:text-green-600
-  ;
-}
-
-.works-card ul {
-  @apply 
-    divide-y divide-gray-200
-  ;
-}
-
-.works-card ul li {
-  @apply 
-    py-3 sm:py-4
-  ;
-}
-
-.product {
-  @apply 
-    flex items-center
-  ;
-}
-
-.product svg {
-  @apply 
-    w-8 h-8
-
-    flex items-center justify-center 
-
-    text-gray-700
-  ;
-}
-
-.product-new {
-  @apply 
-    flex-1
-  ;
-}
-
-.product-new a {
-  @apply 
-    text-sm font-medium text-slate-700 
-    
-    hover:text-green-600
-
-    ms-3
-
-    inline-flex items-center min-h-6
-  ;
-}
-
-.product-new p {
-  @apply 
-    text-sm text-gray-600 truncate
-    
-    ms-3
-  ;
-}
-
-.price {
-  @apply 
-    inline-flex items-center
-
-    text-base font-semibold text-gray-700
-  ;
-}
-
-footer {
-  @apply 
-    w-full h-24
-
-    grid place-items-center
-    
-    mt-20    
-  ;
-}
-
-footer a {
-  @apply 
-    flex items-center justify-center 
-
-    text-2xl text-stone-500 
-    
-    hover:text-green-600
-  ;
-}
-
-footer svg {
-  @apply 
-    w-6 h-6
-
-    text-stone-600
-
-    mr-2
-  ;
-}
-
-footer svg:hover {
-  @apply 
-    text-green-600
-  ;
-}
-
-.foot-color {
-  @apply 
-    w-full
-
-    flex items-end
-  ;
-}
-
-.foot-color-l {
-  @apply 
-    w-1/2 h-2 
-
-    bg-linear-to-r from-stone-400 from-50% to-amber-400 to-50%
-  ;
-}
-
-.color-up {
-  @apply 
-    w-14 h-6
-
-    grid place-items-center
-
-    rounded-tl-sm rounded-tr-sm 
-
-    text-xs text-white 
-
-    bg-red-500
-  ;
-}
-
-.foot-color-r {
-  @apply 
-    w-1/2 h-2
-
-    bg-linear-to-r from-lime-600 from-50% to-orange-600 to-50%
-  ;
-}
-
-.skip-link {
-
-  @apply 
-    absolute -top-[48px] left-1/2 -translate-x-1/2
-
-    z-10000
-
-    w-40 h-12
-
-    grid place-items-center
-
-    rounded-bl-sm rounded-br-sm outline-0
-
-    text-sm text-stone-500 
-
-    bg-white
-  ;
-
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
+  .header-avatar {
+    @apply grid place-self-center max-sm:p-4;
+  }
+
+  .header-avatar img {
+    @apply h-80 md:h-96 aspect-square rounded-full object-cover object-center;
+  }
+
+  .header h1 {
+    @apply w-full grid place-self-center leading-normal text-center text-6xl mb-8 max-sm:px-4;
+  }
+
+  .header span.h1 {
+    @apply text-stone-500 leading-none;
+  }
+
+  .about {
+    @apply w-full grid m-auto rounded-3xl border border-white bg-stone-100 shadow-md;
+  }
+
+  .about-info {
+    @apply grid place-content-evenly rounded-t-3xl bg-white px-10 py-10 gap-y-8;
+  }
+
+  .about-info h3 {
+    @apply text-stone-500 uppercase leading-10;
+  }
+
+  .about-info a {
+    @apply text-stone-500 transition-transform transition-opacity duration-300 cursor-pointer hover:text-green-600;
+  }
+
+  .buro {
+    @apply w-full grid aspect-video bg-stone-50 overflow-hidden;
+  }
+
+  .buro img {
+    @apply w-full aspect-video object-cover;
+  }
+
+  .player {
+    @apply w-full h-42 grid grid-cols-2 lg:grid-cols-[2fr_2fr_3fr] border-t border-white;
+  }
+
+  .controls {
+    @apply grid place-content-center place-items-center rounded-s-3xl bg-transparent border-solid border-r border-stone-300 outline-none hover:shadow-2xl hover:bg-white hover:border hover:border-stone-600;
+  }
+
+  .controls button {
+    @apply transition-transform ease-in-out duration-300 cursor-pointer;
+  }
+
+  .controls svg {
+    @apply w-22 h-22 text-rose-600 hover:text-stone-400;
+  }
+
+  .stopIcon {
+    @apply hidden;
+  }
+
+  .wave-icon {
+    @apply grid place-content-center place-items-center pointer-events-none;
+  }
+
+  .wave-icon svg {
+    @apply text-stone-500;
+  }
+
+  .channel {
+    @apply place-content-center tracking-wider lg:grid max-lg:hidden;
+  }
+
+  .station {
+    @apply text-lg text-stone-600 uppercase cursor-pointer hover:text-rose-600;
+  }
+
+  .genre {
+    @apply text-sm text-stone-500 capitalize;
+  }
+
+  .folio {
+    @apply w-full grid place-items-center max-sm:p-4;
+  }
+
+  .brand {
+    @apply grid place-items-center gap-y-14 my-20 p-8;
+  }
+
+  .brand a {
+    @apply inline-flex min-h-8 min-w-8 cursor-pointer items-center justify-center;
+  }
+
+  .brand img {
+    @apply h-10 object-contain transition-transform ease-in-out duration-300 hover:py-1 hover:px-2;
+  }
+
+  .works {
+    @apply w-full max-w-md grid m-auto bg-white rounded-xl shadow-md p-4 sm:p-8;
+  }
+
+  .card-top {
+    @apply flex items-center justify-between mb-4;
+  }
+
+  img.store {
+    @apply h-6 object-cover;
+  }
+
+  .card-top h5 {
+    @apply text-xl font-bold leading-none text-gray-700;
+  }
+
+  .card-top a {
+    @apply text-sm font-medium text-slate-400 hover:text-green-600;
+  }
+
+  .works-card ul {
+    @apply divide-y divide-gray-200;
+  }
+
+  .works-card ul li {
+    @apply py-3 sm:py-4;
+  }
+
+  .product {
+    @apply flex items-center;
+  }
+
+  .product svg {
+    @apply w-8 h-8 flex items-center justify-center text-gray-700;
+  }
+
+  .product-new {
+    @apply flex-1;
+  }
+
+  .product-new a {
+    @apply text-sm font-medium text-slate-700 hover:text-green-600 ms-3 inline-flex items-center min-h-6;
+  }
+
+  .product-new p {
+    @apply text-sm text-gray-600 truncate ms-3;
+  }
+
+  .price {
+    @apply inline-flex items-center text-base font-semibold text-gray-700;
+  }
+
+  .footer {
+    @apply w-full h-24 grid place-items-center mt-20;
+  }
+
+  .footer a {
+    @apply flex items-center justify-center text-2xl text-stone-500 hover:text-green-600;
+  }
+
+  .footer svg {
+    @apply w-6 h-6 text-stone-600 mr-2;
+  }
+
+  .footer svg:hover {
+    @apply text-green-600;
+  }
+
+  .foot-color {
+    @apply w-full flex items-end;
+  }
+
+  .foot-color-l {
+    @apply w-1/2 h-2 bg-linear-to-r from-stone-400 from-50% to-amber-400 to-50%;
+  }
+
+  .color-up {
+    @apply w-14 h-6 grid place-items-center rounded-tl-sm rounded-tr-sm text-xs text-white bg-red-500;
+  }
+
+  .foot-color-r {
+    @apply w-1/2 h-2 bg-linear-to-r from-lime-600 from-50% to-orange-600 to-50%;
+  }
 }

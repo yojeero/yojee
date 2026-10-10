@@ -1,4 +1,4 @@
-<img src="preview/yo_3.jpg" width="100%">
+<img src="preview/y1.png" width="100%"><img src="preview/y2.png" width="100%">
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">   
 
@@ -13,5 +13,5 @@
 
 #### Tech Stack   
 ```
-Bun | Vite | Tailwind CSS | Vanilla JS   
+Bun | Vite | Biome | Tailwind CSS | Vanilla JS   
 ```

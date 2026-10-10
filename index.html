@@ -1,495 +1,571 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
+    <title>Yojee — Product Engineer & Designer</title>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I`m a Product Engineer - Yojee aka @yojeero"
+    >
+    <link rel="canonical" href="https://yojee.vercel.app/">
 
-<title>Yojee — Product Engineer & Designer</title>
+    <link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any">
 
-  <meta name="description" content="I`m a Product Engineer - Yojee aka @yojeero" />
-  <link rel="canonical" href="https://yojee.vercel.app/" />
+    <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="./images/fav.svg" type="svg+xml" sizes="any" />
+    <!-- CSS -->
+    <script type="module">
+    import '/src/css/style.css';
+    </script>
+  </head>
 
-<meta property="og:title" content="Yojee — Product Engineer" />
-<meta property="og:description" content="I'm a Product Engineer - Yojee aka @yojeero" />
-<meta property="og:image" content="https://yojee.vercel.app/images/shot.webp" />
-<meta property="og:url" content="https://yojee.vercel.app/" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-
-<!-- CSS -->
-  <script type="module">
-    import "/src/css/style.css"
-  </script>
-
-  <link rel="preload" href="./images/look.webp" as="image">
-  <link rel="preload" href="./images/shot.webp" as="image">
-
-</head>
-
-<body class="loading">
-
-  <a href="#main-content" class="skip-link">skip to content</a>
-
-  <div class="loader"><div class="line"></div></div>
-
-  <main id="home">   
-
-    <div class="header">
-
-      <div class="header-ava">
-
-        <a href="https://github.com/yojeero" target="_blank">
-          <img src="./images/look.webp" alt="avatar" fetchpriority="high" />
-        </a>
-        
-      </div>
-
-      <div id="main-content" tabindex="-1"></div>
-
-      <h1>I'm Yojee, <span>a Product Engineer</span></h1>       
-
-    </div>
-
-    <div class="about">
-
-      <div class="about-info">
-
-        <h3>coding &amp; design</h3>
-
-        <div>I'm a Product Engineer and Designer based in the cloud.</div>
-
-        <div>
-          I'm specialized in the full interaction that users have with the web
-          platform, from its design to its development, as well as usability,
-          performance, and accessibility.
+  <body>
+    <main id="home">
+      <div class="header">
+        <div class="header-avatar">
+          <img src="./images/look.webp" alt="avatar" fetchpriority="high">
         </div>
 
-        <div>
+        <h1>I'm Yojee, <span class="h1">a Product Engineer</span></h1>
+      </div>
 
-          <span>Works</span>
+      <div class="about">
+        <div class="about-info">
+          <h3>coding &amp; design</h3>
 
-          <a href="https://dribbble.com/yojeero" target="_blank">Dribbble / </a>
-          <a href="https://creativemarket.com/yojeero" target="_blank">Creative Market / </a>
-          <a href="https://forem.com/yojeero/usb-multiboot-1c4d" target="_blank">Forem</a>
+          <div>I'm a Product Engineer and Designer based in the Cloud.</div>
 
+          <div>
+            I'm specialized in the full interaction that users have with the web
+            platform, from its design to its development, as well as usability,
+            performance, and accessibility.
+          </div>
+
+          <div>
+            <span>Works</span>
+
+            <a href="https://dribbble.com/yojeero" target="_blank"
+              >Dribbble /
+            </a>
+            <a href="https://creativemarket.com/yojeero" target="_blank"
+              >Creative Market /
+            </a>
+            <a
+              href="https://forem.com/yojeero/usb-multiboot-1c4d"
+              target="_blank"
+              >Forem</a
+            >
+          </div>
+
+          <div>
+            <span>Code</span>
+
+            <a href="https://github.com/yojeero" target="_blank">GitHub / </a>
+            <a
+              href="https://marketplace.visualstudio.com/publishers/Yojeero"
+              target="_blank"
+              >VSCode /
+            </a>
+            <a
+              href="https://packagecontrol.io/browse/authors/yojeero"
+              target="_blank"
+              >Sublime Text</a
+            >
+          </div>
         </div>
 
-        <div>
+        <div class="buro">
+          <img src="./images/buro.webp" alt="buro" fetchpriority="high">
+        </div>
 
-          <span>Code</span>
+        <div class="player">
+          <audio id="audio" preload="auto" crossorigin="anonymous">
+            <source
+              src="https://live.stream.maxfive.com/max5-city23"
+              type="audio/mpeg"
+            >
+            <track
+              kind="captions"
+              src="/captions/city23.vtt"
+              srclang="en"
+              label="City23 radio"
+            >
+          </audio>
 
-        <a href="https://github.com/yojeero" target="_blank">GitHub / </a>
-        <a href="https://marketplace.visualstudio.com/publishers/Yojeero" target="_blank">VSCode /
-        </a>
-        <a href="https://packagecontrol.io/browse/authors/yojeero" target="_blank">Sublime Text</a>
+          <div class="controls">
+            <button
+              type="button"
+              id="playToggle"
+              aria-label="Play"
+              aria-pressed="false"
+              class="playIcon"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.3"
+                  d="M18.89 12.846c-.353 1.343-2.023 2.292-5.364 4.19c-3.23 1.835-4.845 2.752-6.146 2.384a3.25 3.25 0 0 1-1.424-.841C5 17.614 5 15.743 5 12s0-5.614.956-6.579a3.25 3.25 0 0 1 1.424-.84c1.301-.37 2.916.548 6.146 2.383c3.34 1.898 5.011 2.847 5.365 4.19a3.3 3.3 0 0 1 0 1.692"
+                  color="currentColor"
+                />
+              </svg>
+            </button>
 
-       </div>
-      </div>
+            <button
+              type="button"
+              id="stopIcon"
+              aria-label="Stop radio"
+              aria-pressed="false"
+              class="stopIcon"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.3"
+                  d="M4 12c0-3.28 0-4.919.814-6.081a4.5 4.5 0 0 1 1.105-1.105C7.08 4 8.72 4 12 4s4.919 0 6.081.814a4.5 4.5 0 0 1 1.105 1.105C20 7.08 20 8.72 20 12s0 4.919-.814 6.081a4.5 4.5 0 0 1-1.105 1.105C16.92 20 15.28 20 12 20s-4.919 0-6.081-.814a4.5 4.5 0 0 1-1.105-1.105C4 16.92 4 15.28 4 12"
+                  color="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
 
-      <div class="shot">
-        <img src="./images/shot.webp" alt="shot" fetchpriority="high"/>
-      </div>
-
-      <div class="player">
-
-        <audio id="audio" preload="auto" crossOrigin="anonymous">
-          <source src="https://live.stream.maxfive.com/max5-city23" type="audio/mpeg">
-        </audio>
-
-        <div class="controls">
-
-          <button id="playToggle" aria-label="Play" aria-pressed="false" class="playIcon">
-
-            <svg viewBox="0 0 24 24">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                d="M18.89 12.846c-.353 1.343-2.023 2.292-5.364 4.19c-3.23 1.835-4.845 2.752-6.146 2.384a3.25 3.25 0 0 1-1.424-.841C5 17.614 5 15.743 5 12s0-5.614.956-6.579a3.25 3.25 0 0 1 1.424-.84c1.301-.37 2.916.548 6.146 2.383c3.34 1.898 5.011 2.847 5.365 4.19a3.3 3.3 0 0 1 0 1.692"
-                color="currentColor" />
+          <div id="waveIcon" class="wave-icon">
+            <svg
+              class="w-12 h-12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M2 10v3">
+                <animate
+                  attributeName="d"
+                  values="M2 10v3; M2 5v13; M2 10v3"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
+              <path d="M6 6v11">
+                <animate
+                  attributeName="d"
+                  values="M6 6v11; M6 3v18; M6 6v11"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
+              <path d="M10 3v18">
+                <animate
+                  attributeName="d"
+                  values="M10 3v18; M10 8v7; M10 3v18"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
+              <path d="M14 8v7">
+                <animate
+                  attributeName="d"
+                  values="M14 8v7; M14 5v13; M14 8v7"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
+              <path d="M18 5v13">
+                <animate
+                  attributeName="d"
+                  values="M18 5v13; M18 10v3; M18 5v13"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
+              <path d="M22 10v3">
+                <animate
+                  attributeName="d"
+                  values="M22 10v3; M22 6v11; M22 10v3"
+                  dur="1s"
+                  repeatCount="indefinite"
+                  begin="indefinite"
+                />
+              </path>
             </svg>
+          </div>
 
-          </button>
+          <div class="channel">
+            <a href="https://www.city23.at/" target="_blank" class="station"
+              >City23</a
+            >
+            <p class="genre">premium radio</p>
+          </div>
+        </div>
+      </div>
 
-          <button id="stopIcon" aria-label="Stop radio" aria-pressed="false" class="stopIcon">      
+      <div class="folio">
+        <div class="brand">
+          <a href="https://astro.build/" target="_blank">
+            <img src="./images/astro.svg" alt="astro">
+          </a>
 
-            <svg viewBox="0 0 24 24">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                d="M4 12c0-3.28 0-4.919.814-6.081a4.5 4.5 0 0 1 1.105-1.105C7.08 4 8.72 4 12 4s4.919 0 6.081.814a4.5 4.5 0 0 1 1.105 1.105C20 7.08 20 8.72 20 12s0 4.919-.814 6.081a4.5 4.5 0 0 1-1.105 1.105C16.92 20 15.28 20 12 20s-4.919 0-6.081-.814a4.5 4.5 0 0 1-1.105-1.105C4 16.92 4 15.28 4 12"
-                color="currentColor" />
-            </svg>
+          <a href="https://discord.com/" target="_blank">
+            <img src="./images/discord.svg" alt="discord">
+          </a>
 
-          </button>
+          <a href="https://vercel.com/" target="_blank">
+            <img src="./images/vercel.svg" alt="vercel">
+          </a>
 
+          <a href="https://tina.io/" target="_blank">
+            <img src="./images/tina.svg" alt="tina">
+          </a>
+
+          <a href="https://github.com/yojeero" target="_blank">
+            <img class="h-8" src="./images/github.svg" alt="github">
+          </a>
         </div>
 
-        <div id="waveIcon" class="wave-icon">
+        <div class="works">
+          <div class="card-top">
+            <h5>My Works</h5>
 
-          <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 10v3">
-              <animate attributeName="d" values="M2 10v3; M2 5v13; M2 10v3" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
-            <path d="M6 6v11">
-              <animate attributeName="d" values="M6 6v11; M6 3v18; M6 6v11" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
-            <path d="M10 3v18">
-              <animate attributeName="d" values="M10 3v18; M10 8v7; M10 3v18" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
-            <path d="M14 8v7">
-              <animate attributeName="d" values="M14 8v7; M14 5v13; M14 8v7" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
-            <path d="M18 5v13">
-              <animate attributeName="d" values="M18 5v13; M18 10v3; M18 5v13" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
-            <path d="M22 10v3">
-              <animate attributeName="d" values="M22 10v3; M22 6v11; M22 10v3" dur="1s" repeatCount="indefinite"
-                begin="indefinite" />
-            </path>
+            <img class="store" src="./images/cm.svg" alt="creativemarket">
+          </div>
+
+          <div class="works-card">
+            <ul>
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Cafe25">
+                    <title>Cafe25</title>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4"
+                      />
+                      <path
+                        d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699"
+                      />
+                    </g>
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://creativemarket.com/yojeero/291024376-Cafe25"
+                      target="_blank"
+                      >Cafe25</a
+                    >
+
+                    <p>PWA radio</p>
+                  </div>
+
+                  <div class="price">$19-76</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Snoo">
+                    <title>Snoo</title>
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
+                      color="currentColor"
+                    />
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://creativemarket.com/yojeero/291223012-Snoo"
+                      target="_blank"
+                      >Snoo</a
+                    >
+
+                    <p>Bank Tailwind</p>
+                  </div>
+
+                  <div class="price">$19-76</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Junso">
+                    <title>Junso</title>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4"
+                      />
+                      <path
+                        d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699"
+                      />
+                    </g>
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://creativemarket.com/yojeero/6038211-Junso"
+                      target="_blank"
+                      >Junso</a
+                    >
+
+                    <p>Luxury Tailwind</p>
+                  </div>
+
+                  <div class="price">$19-76</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Pendev">
+                    <title>Pendev</title>
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
+                      color="currentColor"
+                    />
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://creativemarket.com/yojeero/7268607-Pendev"
+                      target="_blank"
+                      >Pendev</a
+                    >
+
+                    <p>Medic HTML</p>
+                  </div>
+
+                  <div class="price">$29-92</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Beyo">
+                    <title>Beyo</title>
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4"
+                      />
+                      <path
+                        d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699"
+                      />
+                    </g>
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://creativemarket.com/yojeero/6230784-Beyo"
+                      target="_blank"
+                      >Beyo</a
+                    >
+
+                    <p>Vanilla Radio Player</p>
+                  </div>
+
+                  <div class="price">$19-76</div>
+                </div>
+              </li>
+
+              <li>
+                <div class="product">
+                  <svg viewBox="0 0 24 24" role="img" aria-label="Cream">
+                    <title>Cream</title>
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                      d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
+                      color="currentColor"
+                    />
+                  </svg>
+
+                  <div class="product-new">
+                    <a
+                      href="https://marketplace.visualstudio.com/items?itemName=Yojeero.cream"
+                      target="_blank"
+                      >Cream</a
+                    >
+
+                    <p>VSCode theme</p>
+                  </div>
+
+                  <div class="price">Free</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer id="foo" class="footer">
+        <a href="https://github.com/yojeero" target="_blank" rel="noopener">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
           </svg>
 
-        </div>
-
-        <div class="channel">
-          <a href="https://www.city23.at/" target="_blank" class="station">City23</a>         
-          <p class="genre">premium radio</p>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="folio">
-
-      <div class="brand">
-
-       <a href="https://astro.build/" target="_blank">
-          <img src="./images/astro.svg" alt="astro" />
+          yojeero
         </a>
-
-        <a href="https://discord.com/" target="_blank">
-          <img src="./images/discord.svg" alt="discord" />
-        </a>  
-
-        <a href="https://vercel.com/" target="_blank">
-          <img src="./images/vercel.svg" alt="vercel" />
-        </a>
-
-        <a href="https://tina.io/" target="_blank">
-          <img src="./images/tina.svg" alt="tina" />
-        </a>
-
-        <a href="https://github.com/yojeero" target="_blank">
-          <img class="h-8" src="./images/github.svg" alt="github" />
-        </a>   
-
-        </div>
-
-      <div class="works"> 
-
-        <div class="card-top">
-
-          <h5>My Works</h5>
- 
-        <img class="store" src="./images/cm.svg" alt="creativemarket" />      
-
-        </div>
-
-        <div class="works-card">
-
-          <ul role="list">
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" color="currentColor">
-                    <path
-                      d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4" />
-                    <path
-                      d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699" />
-                  </g>
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://creativemarket.com/yojeero/291024376-Cafe25" target="_blank">Cafe25</a>
-
-                  <p>PWA radio</p>
-
-                </div>
-
-                <div class="price">$19-76</div>
-
-              </div>
-
-            </li>
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                    d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
-                    color="currentColor" />
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://creativemarket.com/yojeero/291223012-Snoo" target="_blank">Snoo</a>
-
-                  <p>Bank Tailwind</p>
-
-                </div>
-
-                <div class="price">$19-76</div>
-
-              </div>
-
-            </li>
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" color="currentColor">
-                    <path
-                      d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4" />
-                    <path
-                      d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699" />
-                  </g>
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://creativemarket.com/yojeero/6038211-Junso" target="_blank">Junso</a>
-
-                  <p>Luxury Tailwind</p>
-
-                </div>
-
-                <div class="price">$19-76</div>
-
-              </div>
-
-            </li>
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                    d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
-                    color="currentColor" />
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://creativemarket.com/yojeero/7268607-Pendev" target="_blank">Pendev</a>
-
-                  <p>Medic HTML</p>
-
-                </div>
-
-                <div class="price">$29-92</div>
-
-              </div>
-
-            </li>
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" color="currentColor">
-                    <path
-                      d="M3 10.987v4.506c0 2.833 0 4.249.879 5.129c.878.88 2.293.88 5.121.88h6c2.828 0 4.243 0 5.121-.88S21 18.326 21 15.493v-4.506M7 17.974h4" />
-                    <path
-                      d="M17.796 2.5L6.15 2.53c-1.738-.09-2.184 1.249-2.184 1.903c0 .585-.075 1.438-1.14 3.042c-1.066 1.603-.986 2.08-.385 3.19c.498.92 1.766 1.28 2.428 1.341c2.1.048 3.122-1.766 3.122-3.041c1.042 3.203 4.005 3.203 5.325 2.837c1.322-.367 2.456-1.68 2.723-2.837c.156 1.437.63 2.276 2.027 2.852c1.449.597 2.694-.315 3.319-.9s1.026-1.883-.088-3.31c-.768-.984-1.089-1.912-1.194-2.872c-.06-.557-.114-1.155-.506-1.536c-.572-.556-1.394-.725-1.801-.699" />
-                  </g>
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://creativemarket.com/yojeero/6230784-Beyo" target="_blank">Beyo</a>
-
-                  <p>Vanilla Radio Player</p>
-
-                </div>
-
-                <div class="price">$19-76</div>
-
-              </div>
-
-            </li>
-
-            <li>
-
-              <div class="product">
-
-                <svg viewBox="0 0 24 24">
-                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3"
-                    d="M11.5 8h8.696c.625 0 .937 0 1.166.1c1.012.447.56 1.57.39 2.378c-.033.154-.133.247-.252.323M7.5 8H3.804c-.625 0-.937 0-1.166.1c-1.012.447-.56 1.57-.39 2.378a.49.49 0 0 0 .27.335a1.93 1.93 0 0 1 1.09 1.4l.593 3.375c.26 1.485.35 3.606 1.65 4.652c.955.76 2.33.76 5.081.76H12m2.142-7.558c1.207-.731 2.26-.437 2.893.033c.259.192.389.288.465.288s.206-.096.465-.288c.633-.47 1.686-.764 2.893-.033c1.584.96 1.942 4.125-1.71 6.795c-.697.509-1.044.763-1.648.763s-.951-.254-1.647-.763c-3.653-2.67-3.295-5.836-1.711-6.795M6.5 11L10 3m5 0l2.5 5"
-                    color="currentColor" />
-                </svg>
-
-                <div class="product-new">
-
-                  <a href="https://marketplace.visualstudio.com/items?itemName=Yojeero.cream" target="_blank">Cream</a>
-
-                  <p>VSCode theme</p>
-
-                </div>
-
-                <div class="price">Free</div>
-
-              </div>
-
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-    <footer id="foo">
-
-      <a href="https://github.com/yojeero" target="_blank">
-
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-          <path d="M9 18c-4.51 2-5-2-7-2" />
-        </svg>
-
-        yojeero
-      </a>
-
-    </footer>
-
-  </main>
- 
-  <a href="#home" class="foot-color scroll">
-  
-    <div class="foot-color-l"></div>
-     <div class="color-up">to up</div>
-    <div class="foot-color-r"></div>
-  
-  </a>
-
-  <!-- JS -->
-
-  <!-- loader hide -->
-  <script>
-  window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader");
-    if (!loader) return;
-
-    document.body.classList.remove("loading");
-    loader.classList.add("opacity-0");
-
-    setTimeout(() => loader.remove(), 200);
-  });
-  </script> 
-
-  <!-- smooth scroll -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const e =
-        "scrollingElement" in document
-          ? document.scrollingElement
-          : ((n = document.documentElement),
-            (t = n.scrollTop),
-            (n.scrollTop = t + 1),
-            (t2 = n.scrollTop),
-            (n.scrollTop = t),
-            t2 > t ? n : document.body);
-      const s = (n, d = 800) => {
-        const t = document.querySelector(n);
-        if (!t) return;
-        const r = e.scrollTop,
-          a =
-            Math.min(
-              r + t.getBoundingClientRect().top,
-              e.scrollHeight - window.innerHeight
-            ) - r,
-          i = performance.now();
-        const f = (o) => {
-          let u = Math.min((o - i) / d, 1),
-            c = u === 1 ? 1 : 1 - Math.pow(2, -10 * u);
-          (e.scrollTop = Math.round(r + a * c)),
-            u < 1
-              ? requestAnimationFrame(f)
-              : (history.pushState(null, null, n), (e.scrollTop = r + a));
-        };
-        requestAnimationFrame(f);
+      </footer>
+    </main>
+
+    <a href="#home" class="foot-color scroll">
+      <div class="foot-color-l"></div>
+      <div class="color-up">to up</div>
+      <div class="foot-color-r"></div>
+    </a>
+
+    <!-- JS -->
+    <!-- smooth scroll -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const getScroller = () => {
+        if ('scrollingElement' in document) return document.scrollingElement;
+        const el = document.documentElement;
+        const before = el.scrollTop;
+        el.scrollTop = before + 1;
+        const after = el.scrollTop;
+        el.scrollTop = before;
+        return after > before ? el : document.body;
       };
-      document.querySelectorAll("a.scroll").forEach((n) => {
-        n.addEventListener("click", (o) => {
-          o.preventDefault(), s(n.getAttribute("href"));
+      const scroller = getScroller();
+
+      const smoothScrollTo = (selector, duration = 800) => {
+        const target = document.querySelector(selector);
+        if (!target) return;
+        const start = scroller.scrollTop;
+        const distance =
+          Math.min(
+            start + target.getBoundingClientRect().top,
+            scroller.scrollHeight - window.innerHeight,
+          ) - start;
+        const startTime = performance.now();
+
+        const step = (now) => {
+          const progress = Math.min((now - startTime) / duration, 1);
+          const eased = progress === 1 ? 1 : 1 - 2 ** (-10 * progress);
+          scroller.scrollTop = Math.round(start + distance * eased);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            history.pushState(null, null, selector);
+            scroller.scrollTop = start + distance;
+          }
+        };
+        requestAnimationFrame(step);
+      };
+
+      document.querySelectorAll('a.scroll').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          smoothScrollTo(link.getAttribute('href'));
         });
       });
     });
-  </script>
+    </script>
 
-  <!-- vanilla radio player -->
-  <script>
+    <!-- vanilla radio player -->
+    <script>
     (() => {
-      const audio = document.getElementById("audio");
-      const playBtn = document.getElementById("playToggle");
-      const stopBtn = document.getElementById("stopIcon");
-      const waveAnim = document.getElementById("waveIcon").querySelectorAll("animate");
+      const audio = document.getElementById('audio');
+      const playBtn = document.getElementById('playToggle');
+      const stopBtn = document.getElementById('stopIcon');
+      const waveAnim = document
+        .getElementById('waveIcon')
+        .querySelectorAll('animate');
 
       if (!audio || !playBtn || !stopBtn || !waveAnim.length) return;
 
-      let isPlaying = false;         
+      let isPlaying = false;
       let reconnectTimer;
-      const reconnectDelay = 4000;    
+      const reconnectDelay = 4000;
 
       let streamInitialized = false;
       let streamInitInProgress = false;
 
-      audio.preload = "auto";
-      audio.crossOrigin = "anonymous";
+      audio.preload = 'auto';
+      audio.crossOrigin = 'anonymous';
 
-      const startWave = () => waveAnim.forEach(a => a.beginElement());
-      const stopWave = () => waveAnim.forEach(a => a.endElement());
+      const startWave = () => {
+        for (const a of waveAnim) a.beginElement();
+      };
+      const stopWave = () => {
+        for (const a of waveAnim) a.endElement();
+      };
 
       const showPlayUI = () => {
-        playBtn.style.display = "block";
-        stopBtn.style.display = "none";
+        playBtn.style.display = 'block';
+        stopBtn.style.display = 'none';
         stopWave();
-        playBtn.setAttribute("aria-label", "Play radio");
-        playBtn.setAttribute("aria-pressed", "false");
-        stopBtn.setAttribute("aria-pressed", "false");
+        playBtn.setAttribute('aria-label', 'Play radio');
+        playBtn.setAttribute('aria-pressed', 'false');
+        stopBtn.setAttribute('aria-pressed', 'false');
       };
 
       const showStopUI = () => {
-        playBtn.style.display = "none";
-        stopBtn.style.display = "block";
+        playBtn.style.display = 'none';
+        stopBtn.style.display = 'block';
         startWave();
-        stopBtn.setAttribute("aria-label", "Stop radio");
-        playBtn.setAttribute("aria-pressed", "true");
-        stopBtn.setAttribute("aria-pressed", "true");
+        stopBtn.setAttribute('aria-label', 'Stop radio');
+        playBtn.setAttribute('aria-pressed', 'true');
+        stopBtn.setAttribute('aria-pressed', 'true');
       };
 
       const reconnect = () => {
@@ -508,30 +584,36 @@
         streamInitInProgress = true;
 
         audio.muted = true;
-        audio.play().then(() => {
-          streamInitialized = true;
-          streamInitInProgress = false;
-        }).catch(() => {
-          streamInitInProgress = false;
-        });
+        audio
+          .play()
+          .then(() => {
+            streamInitialized = true;
+            streamInitInProgress = false;
+          })
+          .catch(() => {
+            streamInitInProgress = false;
+          });
       };
 
-      window.addEventListener("pointerdown", initStream, { once: true });
+      window.addEventListener('pointerdown', initStream, { once: true });
 
       const playAudio = () => {
         initStream();
         audio.muted = false;
-        audio.play().then(() => {
-          isPlaying = true;
-          showStopUI();
-        }).catch(() => {
-          isPlaying = false;
-          reconnect();
-        });
+        audio
+          .play()
+          .then(() => {
+            isPlaying = true;
+            showStopUI();
+          })
+          .catch(() => {
+            isPlaying = false;
+            reconnect();
+          });
       };
 
       const stopAudio = () => {
-        isPlaying = false;   
+        isPlaying = false;
         audio.muted = true;
         showPlayUI();
       };
@@ -541,14 +623,13 @@
         else playAudio();
       };
 
-      playBtn.addEventListener("click", toggleAudio);
-      stopBtn.addEventListener("click", toggleAudio);
+      playBtn.addEventListener('click', toggleAudio);
+      stopBtn.addEventListener('click', toggleAudio);
 
-      audio.addEventListener("stalled", reconnect);
-      audio.addEventListener("waiting", stopWave);
-      audio.addEventListener("error", reconnect);
+      audio.addEventListener('stalled', reconnect);
+      audio.addEventListener('waiting', stopWave);
+      audio.addEventListener('error', reconnect);
     })();
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
