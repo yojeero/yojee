@@ -2,8 +2,7 @@
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">   
 
-> [!NOTE]
-> Features 🧼   
+Features 🧼   
 
 - Clean UI  
 - Online Radio 
@@ -14,4 +13,6 @@
 #### Tech Stack   
 ```
 Bun | Vite | Biome | Tailwind CSS | Vanilla JS   
-```
+```   
+
+<img src="preview/100.png" width="50%">
