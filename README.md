@@ -15,4 +15,4 @@ Features 🧼
 Bun | Vite | Biome | Tailwind CSS | Vanilla JS   
 ```   
 
-<img src="preview/100.png" width="50%">
+<img src="preview/100.png" width="70%">
