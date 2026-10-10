@@ -53,7 +53,7 @@
   }
 
   .header {
-    @apply w-full min-h-dvh grid place-content-evenly;
+    @apply w-full min-h-dvh grid place-content-evenly py-[clamp(2rem,4vw,6rem)];
   }
 
   .header-avatar {
@@ -61,11 +61,13 @@
   }
 
   .header-avatar img {
-    @apply h-80 md:h-96 aspect-square rounded-full object-cover object-center;
+    @apply h-72 md:h-96 aspect-square rounded-full object-cover object-center;
   }
 
   .header h1 {
-    @apply w-full grid place-self-center leading-normal text-center text-6xl mb-8 max-sm:px-4;
+    @apply w-full grid place-self-center leading-28 text-center;
+
+    font-size: clamp(3rem, 2.464rem + 1.714vi, 3.75rem);
   }
 
   .header span.h1 {
