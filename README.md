@@ -1,8 +1,6 @@
 <img src="preview/y1.webp" width="100%">   
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">
-<img src="https://img.shields.io/badge/100-green?style=for-the-badge" width="20%" alt="Yojee">
-<img src="https://img.shields.io/badge/lighthouse-green?style=for-the-badge" width="30%" alt="Yojee">
 
 Features 🧼   
 
@@ -11,7 +9,7 @@ Features 🧼
 - SEO-Friendly   
 - Responsive Design  
 - Cloud & Static Hosting Ready
-- 100% Lighthouse Performance
+- 100% Lighthouse Performance   
 
 #### Tech Stack   
 ```
