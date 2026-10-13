@@ -1,4 +1,4 @@
-<img src="preview/d1.webp" width="100%"><img src="preview/d2.webp" width="50%"><img src="preview/d4.webp" width="50%">   
+<img src="preview/d1.webp" width="100%">   
 
 <img src="https://img.shields.io/badge/Yojee-7678ed?style=for-the-badge" width="40%" alt="Yojee">
 
