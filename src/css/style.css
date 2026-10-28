@@ -53,7 +53,7 @@
   }
 
   .header-avatar img {
-    @apply w-full h-64 md:h-96 aspect-square rounded-full object-cover object-center overflow-hidden;
+    @apply w-full h-72 md:h-96 aspect-square rounded-full object-cover object-center overflow-hidden;
   }
 
   .header h1 {
