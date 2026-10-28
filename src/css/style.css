@@ -53,7 +53,7 @@
   }
 
   .header-avatar img {
-    @apply w-full md:h-96 aspect-[4/5] rounded-lg object-cover object-bottom;
+    @apply w-full h-82 md:h-96 aspect-square rounded-full object-cover object-center overflow-hidden;
   }
 
   .header h1 {
@@ -83,11 +83,11 @@
   }
 
   .buro {
-    @apply w-full grid aspect-video bg-stone-50 overflow-hidden;
+    @apply w-full grid bg-stone-50;
   }
 
   .buro img {
-    @apply w-full aspect-video object-cover;
+    @apply w-full aspect-video object-cover overflow-hidden;
   }
 
   .player {
