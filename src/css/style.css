@@ -41,23 +41,19 @@
 
 @layer components {
   main {
-    @apply w-full max-w-3xl mx-auto grid justify-center justify-self-center text-stone-700 leading-relaxed;
+    @apply w-full max-w-3xl mx-auto grid justify-center justify-self-center text-stone-700 leading-relaxed px-4;
   }
 
   .header {
-    @apply w-full min-h-dvh grid place-content-evenly py-[clamp(2rem,4vw,6rem)];
-  }
-
-  .header-avatar {
-    @apply grid place-self-center max-sm:p-4;
+    @apply w-full min-h-dvh flex flex-col;
   }
 
   .header-avatar img {
-    @apply w-full h-72 md:h-96 aspect-square rounded-full object-cover object-center overflow-hidden;
+    @apply flex aspect-[9/16] rounded-b-full object-cover object-center overflow-hidden mx-auto h-[50dvh];
   }
 
   .header h1 {
-    @apply w-full grid place-self-center leading-28 text-center;
+    @apply w-full grid place-self-center leading-28 text-center py-[clamp(4rem,4vw,6rem)];
 
     font-size: clamp(3rem, 2.464rem + 1.714vi, 3.75rem);
   }
@@ -67,7 +63,7 @@
   }
 
   .about {
-    @apply w-full grid m-auto rounded-3xl border border-white bg-stone-100 shadow-md;
+    @apply w-full grid mx-auto rounded-3xl border border-white bg-stone-100 shadow-md;
   }
 
   .about-info {
