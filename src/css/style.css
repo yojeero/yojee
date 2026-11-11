@@ -83,7 +83,8 @@
   }
 
   .buro img {
-    @apply w-full aspect-video object-cover overflow-hidden;
+    @apply w-full aspect-[4/3] object-cover overflow-hidden;
+    /* @apply w-full aspect-video object-cover overflow-hidden; */
   }
 
   .player {
