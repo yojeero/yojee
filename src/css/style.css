@@ -45,11 +45,11 @@
   }
 
   .header {
-    @apply w-full min-h-dvh flex flex-col;
+    @apply w-full min-h-dvh flex flex-col justify-center;
   }
 
   .header-avatar img {
-    @apply flex aspect-[9/16] rounded-b-full object-cover object-center overflow-hidden mx-auto h-[50dvh];
+    @apply flex aspect-square rounded-full object-cover object-center overflow-hidden mx-auto h-[24dvh] md:h-[34dvh] opacity-90;
   }
 
   .header h1 {
@@ -84,7 +84,7 @@
 
   .buro img {
     /* @apply w-full aspect-[4/3] object-cover overflow-hidden; */
-    @apply w-full aspect-video object-cover overflow-hidden object-bottom;
+    @apply w-full aspect-video object-cover overflow-hidden;
   }
 
   .player {
